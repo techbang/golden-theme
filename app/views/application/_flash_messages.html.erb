@@ -1,0 +1,10 @@
+<header class="hidden">
+  <h5><%= t('.title') %></h5>
+</header>
+
+<div class="messages">
+  <% flash.each do |key, value| %>
+    <% next if %w(timedout).include? key.to_s %>
+    <%= flash_box key, value %>
+  <% end %>
+</div>

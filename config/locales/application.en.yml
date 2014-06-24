@@ -1,0 +1,19 @@
+en:
+  application:
+    flash_messages:
+      title: 'Flash messages'
+    bootstrap:
+      header:
+        nav_toggle: 'Toggle navigation'
+        site_title: 'GoldenTheme'
+      main_navigation:
+        title: 'Main navigation'
+      user_navigation:
+        title: 'User navigation'
+        sign_up: 'Sign Up'
+        sign_in: 'Sign In'
+        sign_out: 'Sign Out'
+        edit_profile: 'Edit Profile'
+      pagination:
+        previous_label: '&larr;'
+        next_label: '&rarr;'

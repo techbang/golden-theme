@@ -1,0 +1,22 @@
+<header class="hidden">
+  <h5><%= t('.title') %></h5>
+</header>
+
+<div id="user-identity">
+  <%= render_list class: 'nav navbar-nav pull-right' do |li|
+    if signed_in?
+      li << [
+        dropdown_toggle(current_user.name),
+        dropdown_menu do |li2|
+          li2 << link_to_edit_user_profile
+          li2 << ['', class: 'divider']
+          li2 << link_to_user_sign_out
+        end,
+        { class: 'dropdown' }
+      ]
+    else
+      li << link_to_user_sign_up
+      li << link_to_user_sign_in
+    end
+  end %>
+</div>

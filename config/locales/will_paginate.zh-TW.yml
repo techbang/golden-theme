@@ -1,0 +1,33 @@
+zh-TW:
+  will_paginate:
+    previous_label: "&#8592; 上一頁"
+    next_label: "下ㄧ頁 &#8594;"
+    page_gap: "&hellip;"
+
+    page_entries_info:
+      single_page:
+        zero:  "沒有找到任何 %{model} 資料"
+        one:   "顯示 1 筆 %{model} 資料"
+        other: "顯示所有 %{count} 筆 %{model} 資料"
+      single_page_html:
+        zero:  "沒有找到任何 %{model} 資料"
+        one:   "顯示 <b>1</b> 筆 %{model} 資料"
+        other: "顯示所有 <b>%{count}</b> 筆 %{model}"
+
+      multi_page: "顯示第 %{from} 到 %{to} 筆 %{model} 資料，總計 %{count} 筆"
+      multi_page_html: "顯示第 <b>%{from}</b> 到 <b>%{to}</b> 筆 %{model} 資料，總計 <b>%{count}</b> 筆"
+
+    # models:
+    #   entry:
+    #     zero:  entries
+    #     one:   entry
+    #     few:   entries
+    #     other: entries
+
+    # line_item:
+    #   page_entries_info:
+    #     single_page:
+    #       zero:  "Your shopping cart is empty"
+    #       one:   "Displaying one item in your cart"
+    #       other: "Displaying all %{count} items"
+    #     multi_page: "Displaying items %{from} - %{to} of %{count} in total"

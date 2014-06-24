@@ -1,0 +1,19 @@
+zh-TW:
+  application:
+    flash_messages:
+      title: '動態訊息'
+    bootstrap:
+      header:
+        nav_toggle: '切換導覽列'
+        site_title: 'GoldenTheme'
+      main_navigation:
+        title: '網站導覽'
+      user_navigation:
+        title: '用戶導覽'
+        sign_up: '註冊'
+        sign_in: '登入'
+        sign_out: '登出'
+        edit_profile: '編輯個人資料'
+      pagination:
+        previous_label: '&larr;'
+        next_label: '&rarr;'
