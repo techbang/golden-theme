@@ -1,6 +1,6 @@
 module Golden::Theme::Bootstrap
   module DropdownHelper
-    def dropdown_toggle text, url = '', options = {}
+    def bootstrap_dropdown_toggle text, url = '', options = {}
       text = text.html_safe << ' '
       text << content_tag(:span, nil, class: 'caret')
       options = {
@@ -10,7 +10,7 @@ module Golden::Theme::Bootstrap
       link_to text, url, options
     end
 
-    def dropdown_btn text, options = {}
+    def bootstrap_dropdown_btn text, options = {}
       text = text.html_safe << ' '
       text << content_tag(:span, nil, class: 'caret')
       options = {
@@ -22,12 +22,12 @@ module Golden::Theme::Bootstrap
       button_tag text, options
     end
 
-    def dropdown_menu options = {}, &block
+    def bootstrap_dropdown_menu options = {}, &block
       options = {
         role: 'menu',
         class: 'dropdown-menu'
       }.deep_merge options
-      render_list options, &block
+      bootstrap_ul_tag options, &block
     end
   end
 end

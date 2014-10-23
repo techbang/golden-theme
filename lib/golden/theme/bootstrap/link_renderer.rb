@@ -29,11 +29,11 @@ module Golden::Theme
 
       protected
 
-      def html_container(html)
+      def html_container html
         tag :ul, html, container_attributes
       end
 
-      def page_number(page)
+      def page_number page
         options = { rel: rel_value(page) }
         options.deep_merge! link_options unless link_options.blank?
         unless page == current_page
@@ -47,7 +47,7 @@ module Golden::Theme
         tag :li, link(super, nil), class: 'disabled'
       end
 
-      def previous_or_next_page(page, text, class_name)
+      def previous_or_next_page page, text, class_name
         options = {}
         options.deep_merge! link_options unless link_options.blank?
 

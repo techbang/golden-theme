@@ -1,10 +1,10 @@
 module Golden::Theme::Bootstrap
   module CommonHelper
-    def render_list list = [], options = {}
-      options, list = list, [] if list.is_a? Hash
-      yield list if block_given?
+    def bootstrap_ul_tag li = [], options = {}
+      options, li = li, [] if li.is_a? Hash
+      yield li if block_given?
       items = ''.html_safe
-      list.each_with_index do |item, index|
+      li.each_with_index do |item, index|
         if item.is_a? Array
           item_options = item.pop
           item_content = item.join('').html_safe
@@ -15,7 +15,7 @@ module Golden::Theme::Bootstrap
 
         item_class = []
         item_class << 'first' if index == 0
-        item_class << 'last' if index == (list.length - 1)
+        item_class << 'last' if index == (li.length - 1)
         link = item_content.match(/href=(["'])(.*?)(\1)/)[2] rescue nil
         item_class << 'current active' if link and (current_page?(link) rescue false)
         item_class << item_options.delete(:class) if item_options[:class]
@@ -26,7 +26,7 @@ module Golden::Theme::Bootstrap
       content_tag :ul, items, options
     end
 
-    def link_to_callback_button callback_id, options = {}
+    def bootstrap_callback_button callback_id, options = {}
       options = {
         data: {
           callback_id: callback_id

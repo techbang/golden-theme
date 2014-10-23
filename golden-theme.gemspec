@@ -22,8 +22,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake'
 
   spec.add_dependency 'sass-rails'
-  spec.add_dependency 'bootstrap-sass'
   spec.add_dependency 'compass-rails'
+
+  spec.add_dependency 'bootstrap-sass'
+  spec.add_dependency 'autoprefixer-rails'
 
   spec.add_dependency 'coffee-rails'
   spec.add_dependency 'jquery-rails'

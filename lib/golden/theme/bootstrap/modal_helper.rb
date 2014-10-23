@@ -1,6 +1,6 @@
 module Golden::Theme::Bootstrap
   module ModalHelper
-    def link_to_modal text, url, modal_id, options = {}
+    def bootstrap_modal_open_link_to text, url, modal_id, options = {}
       options = {
         remote: true,
         data: {
@@ -13,7 +13,7 @@ module Golden::Theme::Bootstrap
       link_to text, url, options
     end
 
-    def link_to_open_modal text, url, modal_id, options = {}
+    def bootstrap_modal_open_iconed_link_to text, url, modal_id, options = {}
       options = {
         remote: true,
         data: {
@@ -23,10 +23,10 @@ module Golden::Theme::Bootstrap
         },
         class: 'modal-open'
       }.deep_merge options
-      iconed_link_to text, url, options
+      bootstrap_iconed_link_to text, url, options
     end
 
-    def link_to_edit_modal url, modal_id, options = {}
+    def bootstrap_modal_edit_link_to url, modal_id, options = {}
       options = {
         remote: true,
         data: {
@@ -36,10 +36,10 @@ module Golden::Theme::Bootstrap
         },
         class: 'modal-open btn btn-default'
       }.deep_merge options
-      link_to_edit url, options
+      bootstrap_link_to_edit url, options
     end
 
-    def link_to_close_button
+    def bootstrap_modal_close_button
       options = {
         type: 'button',
         name: nil,
@@ -49,11 +49,10 @@ module Golden::Theme::Bootstrap
       button_tag t('helpers.close'), options
     end
 
-    def modal_close_button
+    def bootstrap_modal_close_icon
       options = {
         type: 'button',
         name: nil,
-        'aria-hidden' => 'true',
         data: { dismiss: 'modal' },
         class: 'close'
       }

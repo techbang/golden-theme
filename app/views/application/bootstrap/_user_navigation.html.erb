@@ -3,11 +3,11 @@
 </header>
 
 <div id="user-identity">
-  <%= render_list class: 'nav navbar-nav pull-right' do |li|
+  <%= bootstrap_ul_tag class: 'nav navbar-nav pull-right' do |li|
     if signed_in?
       li << [
-        dropdown_toggle(current_user.name),
-        dropdown_menu do |li2|
+        bootstrap_dropdown_toggle(current_user.name),
+        bootstrap_dropdown_menu do |li2|
           li2 << link_to_edit_user_profile
           li2 << ['', class: 'divider']
           li2 << link_to_user_sign_out

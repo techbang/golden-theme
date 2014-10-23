@@ -5,6 +5,6 @@
 <div class="messages">
   <% flash.each do |key, value| %>
     <% next if %w(timedout).include? key.to_s %>
-    <%= flash_box key, value %>
+    <%= bootstrap_flash_box key, value %>
   <% end %>
 </div>

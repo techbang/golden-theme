@@ -1,6 +1,6 @@
 module Golden::Theme::Bootstrap
   module ButtonHelper
-    def render_btn_group tag = :div, options = {}
+    def bootstrap_btn_group tag = :div, options = {}
       buttons = []
       yield buttons if block_given?
       text = buttons.join('').html_safe

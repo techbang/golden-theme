@@ -12,5 +12,6 @@ module Golden
   end
 end
 
+require 'golden/theme/helpers'
 require 'golden/theme/engine'
 require 'golden/theme/bootstrap/link_renderer'
