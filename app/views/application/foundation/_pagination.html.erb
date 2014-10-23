@@ -1,0 +1,9 @@
+<%= will_paginate(collection, {
+  renderer: Golden::Theme::Foundation::LinkRenderer,
+  inner_window: 2,
+  outer_window: 0,
+  class: 'pagination',
+  previous_label: t('.previous_label'),
+  next_label: t('.next_label'),
+  params: params || {}
+}) %>

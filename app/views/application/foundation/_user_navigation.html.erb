@@ -1,0 +1,19 @@
+<div id="user-identity">
+  <h5 class="hide"><%= t('.title') %></h5>
+  <%= foundation_ul_tag class: 'right' do |li|
+    if signed_in?
+      li << [
+        foundation_top_bar_dropdown_link_to(current_user.name),
+        foundation_top_bar_dropdown_ul_tag do |li2|
+          li2 << link_to_edit_user_profile
+          li2 << ['', class: 'divider']
+          li2 << link_to_user_sign_out
+        end,
+        { class: 'has-dropdown' }
+      ]
+    else
+      li << link_to_user_sign_up
+      li << link_to_user_sign_in
+    end
+  end %>
+</div>

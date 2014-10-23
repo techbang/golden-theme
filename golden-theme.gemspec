@@ -27,6 +27,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'bootstrap-sass'
   spec.add_dependency 'autoprefixer-rails'
 
+  spec.add_dependency 'foundation-rails'
+  spec.add_dependency 'foundation-icons-sass-rails'
+
   spec.add_dependency 'coffee-rails'
   spec.add_dependency 'jquery-rails'
   spec.add_dependency 'jquery-ui-rails'

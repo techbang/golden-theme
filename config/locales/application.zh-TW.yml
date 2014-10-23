@@ -17,3 +17,19 @@ zh-TW:
       pagination:
         previous_label: '&larr;'
         next_label: '&rarr;'
+    foundation:
+      header:
+        nav_toggle: '切換導覽列'
+        site_title: 'GoldenTheme'
+        menu: '選單'
+      main_navigation:
+        title: '網站導覽'
+      user_navigation:
+        title: '用戶導覽'
+        sign_up: '註冊'
+        sign_in: '登入'
+        sign_out: '登出'
+        edit_profile: '編輯個人資料'
+      pagination:
+        previous_label: '&larr;'
+        next_label: '&rarr;'
