@@ -18,6 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
+Add following to `application_controller.rb` with `:bootstrap` or `:foundation`
+
+```
+  before_action do
+    golden_theme_framework :bootstrap
+  end
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/golden-theme/fork )
