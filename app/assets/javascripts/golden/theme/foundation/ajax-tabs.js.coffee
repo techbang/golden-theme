@@ -1,7 +1,9 @@
 $ ->
   $('.nav-tabs-ajax')
     .on 'ajax:beforeSend', 'a[data-toggle="tab"]', ->
-      $.bench.util.replaceDataTarget $(this), 'Loading...'
+      target = $(this).attr('data-target')
+      $(target).children().hide()
+      $(target).append('<p>Loading...</p>')
     .on 'ajax:success', 'a[data-toggle="tab"]', (event, data, status, xhr) ->
       $.bench.util.replaceDataTarget $(this), data
       $.bench.util.enableChosen()
